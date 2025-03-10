@@ -44,5 +44,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# iOS Build
-/ios/DerivedData/
+# Environment
+/lib/services/api_key.dart

@@ -116,17 +116,6 @@ class TransactionService {
     List<Transaction> listTransactions = await getAll();
     listTransactions.add(transaction);
 
-    int statusCode = await save(
-      listTransactions,
-      transactionId: transaction.id,
-    );
-
-    if (statusCode.toString()[0] == "2") {
-      print(
-        '${DateTime.now()} | Requisição de adição bem sucedida (${transaction.id}).',
-      );
-    } else {
-      print('${DateTime.now()} | Requisição falhou (${transaction.id}).');
-    }
+    await save(listTransactions, transactionId: transaction.id);
   }
 }

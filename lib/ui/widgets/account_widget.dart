@@ -28,7 +28,7 @@ class AccountWidget extends StatelessWidget {
                 '${account.name} ${account.lastName}',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              Text('ID: ${account.id}'),
+              Text('ID: ${account.id}', style: TextStyle(fontSize: 9)),
               Text('Saldo: R\$ ${account.balance.toStringAsFixed(2)}'),
               Text('Tipo: ${account.accountType ?? 'Sem tipo definido.'}'),
             ],

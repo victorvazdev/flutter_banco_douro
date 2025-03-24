@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_banco_douro/ui/styles/colors.dart';
 
-class AddAccountModal extends StatelessWidget {
+class AddAccountModal extends StatefulWidget {
   const AddAccountModal({super.key});
+
+  @override
+  State<AddAccountModal> createState() => _AddAccountModalState();
+}
+
+class _AddAccountModalState extends State<AddAccountModal> {
+  String _accountType = 'AMBROSIA';
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +52,7 @@ class AddAccountModal extends StatelessWidget {
               height: 331,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
                     decoration: InputDecoration(label: const Text('Nome')),
@@ -54,11 +62,35 @@ class AddAccountModal extends StatelessWidget {
                       label: const Text('Último nome'),
                     ),
                   ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      label: const Text('Tipo de conta'),
-                    ),
+                  const SizedBox(height: 16),
+                  Text('Tipo da conta'),
+                  DropdownButton<String>(
+                    value: _accountType,
+                    isExpanded: true,
+                    items: [
+                      DropdownMenuItem(
+                        value: 'AMBROSIA',
+                        child: Text('Ambrosia'),
+                      ),
+                      DropdownMenuItem(
+                        value: 'CANJUCA',
+                        child: Text('Canjica'),
+                      ),
+                      DropdownMenuItem(value: 'PUDIM', child: Text('Pudim')),
+                      DropdownMenuItem(
+                        value: 'BRIGADEIRO',
+                        child: Text('Brigadeiro'),
+                      ),
+                    ],
+                    onChanged: (value) {
+                      if (value != null) {
+                        setState(() {
+                          _accountType = value;
+                        });
+                      }
+                    },
                   ),
+                  const SizedBox(height: 32),
                   Row(
                     children: [
                       Expanded(

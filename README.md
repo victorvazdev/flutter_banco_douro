@@ -1,6 +1,6 @@
 # 📱 Flutter Banco d'Ouro
 
-**Flutter Banco d'Ouro** é um aplicativo Flutter que simula um sistema bancário com interface gráfica. Permite ao usuário visualizar contas, cadastrar novas, e realizar transações financeiras com persistência de dados via GitHub Gists API. O sistema inclui autenticação visual simples, feedback visual com `SnackBar`, `FutureBuilder`, e organização com `StreamController`.
+**Banco d'Ouro** é um aplicativo Flutter que simula um sistema bancário com interface gráfica. Permite ao usuário visualizar contas, cadastrar novas, e realizar transações financeiras com persistência de dados via GitHub Gists API. O sistema inclui autenticação visual simples, feedback visual com `SnackBar`, `FutureBuilder`, e organização com `StreamController`.
 
 ![Banco dOuro](https://github.com/user-attachments/assets/9024d4fa-c1d0-40bb-86ce-464aeccaa5b6)
 

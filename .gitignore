@@ -46,3 +46,6 @@ app.*.map.json
 
 # Environment
 /lib/services/api_key.dart
+
+# Firebase related
+.firebase
